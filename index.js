@@ -8,17 +8,16 @@ var book ={
 }
 
 
-function animal(species, name, sound){
-this.species = "species"
-this.name = "name"
-this.sound = "sound"
-
-    makeSound function(){
-        console.log(this.name + " says " + this.sound)
+function Animal(species, name, sound){
+this.species = species
+this.name = name
+this.sound = sound
+this.makeSound = function() {
+    console.log(this.name + "says" + this.sound + ".")
     }
 }
-const pet = animal1("Dog","Buddy", "Wolf")
-const wildLife = animal2("Lion", "Leo", "Roar")
+const animal1 = new Animal("dog", "Buddy", "Woof")
+const animal2 = new Animal("lion", "Leo", "roar")
 
-pet.makeSound()
-wildLife.makeSound()
+animal1.makeSound()
+animal2.makeSound()
